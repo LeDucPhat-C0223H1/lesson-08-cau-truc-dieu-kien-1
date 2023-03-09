@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr1 Lead Year</title>
+</head>
+
+<body>
+    <P>[Thực hành] Kiểm tra năm nhuận</P>
+    
+    <!--Bước 1: Làm bài bình thường-->
+    
+    <!--<script>
+        let year = parseInt;
+        year = prompt("Enter a year");
+
+        if(year % 4 == 0){
+
+            if(year % 100 == 0){
+
+                if(year % 400 == 0){
+                    document.write (year + " " + "is a leap year")}
+                else{
+                    document.write (year + " " + "is not a leap year")
+                }
+                
+            }else{
+                document.write (year + " " + "is a leap year")
+            }
+
+        }else{
+            document.write (year + " " + "is not a leap year");
+        }
+    </script>-->
+
+    <!--Bước 2: Với các điều kiện như trên,
+        chúng ta có thể chỉnh sửa để mã nguồn tốt hơn như sau:-->
+
+    <!--<script>
+        let year = parseInt(prompt("Enter a year"));
+        let isLeapYear = false;
+
+        if (year % 4 == 0) {
+
+            if (year % 100 == 0) {
+
+                if (year % 400 == 0) {
+                isLeapYear = true;
+                }
+
+            } else {
+                isLeapYear = true;
+            }
+        }
+
+        if (isLeapYear) {
+            document.write(year + " " + " is a leap year");
+        }else {
+             document.write(year +" " + " is NOT a leap year");
+        }
+    </script>-->
+
+    <!--Đảm bảo clean code
+        Trong đoạn mã trên, các điều kiện bên trong các câu lệnh if sẽ là khó hiểu, 
+        bởi vì bản thân các biểu thức không trực tiếp nói rõ ý nghĩa của nó. 
+        Chúng ta có thể sử dụng kỹ thuật tách biến để các câu lệnh này dễ hiểu hơn. -->
+
+    <script>
+        let year = parseInt(prompt("Enter a year"));
+        let isLeapYear = false;
+
+        let isDivisibleBy4 = year % 4 == 0;
+        if (isDivisibleBy4) {
+
+            let isDivisibleBy100 = year % 100 == 0;
+            if (isDivisibleBy100) {
+
+                let isDivisibleBy400 = year % 400 == 0;
+                if (isDivisibleBy400) {
+                isLeapYear = true;
+                }
+
+            } else {
+            isLeapYear = true;
+             }
+        }
+
+        if (isLeapYear) {
+            document.write (year + " " + " is a leap year");
+
+        } else {
+            document.write(year + " " + " is NOT a leap year");
+        }
+    </script>
+</body>
+</html>
