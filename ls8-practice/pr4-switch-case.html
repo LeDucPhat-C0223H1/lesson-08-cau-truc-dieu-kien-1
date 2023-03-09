@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập với cấu trúc switch-case</title>
+</head>
+<body>
+
+    <h1>Switch Case</h1>
+    <p>Bài 1: Viết lại mẫu cấu trúc if sau thành cấu trúc switch <br>
+        Nhập giá trị cho biến browser
+    </p>
+    <!--let browser = prompt("Enter browser name!")
+        if (browser == 'Edge') {
+            alert("You've got the Edge!");
+        } else if (browser == 'Chrome' || browser == 'Firefox' || browser == 'Safari' || browser == 'Opera') {
+            alert('Okay we support these browsers too');
+        } else {
+            alert('We hope that this page looks ok!');
+        }
+    -->
+
+    <script>
+        let browser = prompt("Enter brower name!");
+        switch (browser) {
+            case "Edge" :
+                alert ("You've got the Edge!");
+                break;
+            case "Chrome":
+            case "Firefox":
+            case "Safari":
+            case "Opera":
+                arlet ("Okay we support these browers too");
+                break;
+            default:
+                alert ("We hope that this page looks ok!");
+        }
+    </script>
+
+    <p>Bài 2: Viết lại mẫu cấu trúc if sau thành cấu trúc switch
+        Nhập giá trị cho biến "a"
+        Hãy nhập 0 1 2 3 và các số khác
+    </p>
+    <!--let a = prompt('a?', '');
+        if (a == 0) {
+             alert(0);
+        }
+        if (a == 1) {
+            alert(1);
+        }
+        if (a == 2 || a == 3) {
+            alert('2,3');
+        }
+    -->
+
+    <script>
+        let a = parseInt (prompt('a?', ''));
+        switch (a) {
+            case 0:
+            alert(0);
+            break;
+        case 1:
+            alert(1);
+            break;
+        case 2:
+        case 3:
+            alert("2,3");
+            break;
+        default :
+            alert("Hãy nhập 0 1 2 3 ")
+            break;
+        }
+    </script>
+
+    <p>Bài 3: Nhập vào một số, kiểm tra giá trị của số nhập vào<br>
+        Nhập giá biến "number"
+    </p>
+    <!--let value = prompt('Type a number', 0);
+        if (value > 0) {
+            alert(1);
+        } else if (value < 0) {
+            alert(-1);
+        } else {
+            alert(0);
+        }
+    -->
+
+    <script>
+        let value = parseInt (prompt("Type a number", 0));
+        switch ((value > 0) ? 1 : (value < 0) ? -1 : (0)) { 
+            case (1):
+                alert(1)
+                break;
+            case (-1) :
+                arlet(-1)
+                break;
+            default :
+                alert(0)
+        }
+    </script>
+</body>
+</html>
